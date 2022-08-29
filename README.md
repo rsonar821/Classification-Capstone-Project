@@ -15,21 +15,25 @@ To predict coronary heart disease is considered one of the most difficult and co
 <h2 align="center"> Features Used </h2>
 
 <h3> Demographic: </h3>
+
 * sex: Male or Female ("M" or "F")
 * age: Age of the patient; (Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)
 * education: Education level of a person
 
 <h3> Behavioral: </h3>
+
 * is_smoking: Whether or not the patient is a current smoker ("YES" or "NO")
 * cigsPerDay: The number of cigarettes that the person smoked on average in one day. (Can be considered continuous as one can have any number of cigarettes, even half a cigarette.)
 
 <h3> Medical (History): </h3>
+
 * BPMeds: Whether or not the patient was on blood pressure medication (Nominal)
 * prevalentStroke: Whether or not the patient had previously had a stroke (Nominal)
 * prevalentHyp: Whether or not the patient was hypertensive (Nominal)
 * diabetes: Whether or not the patient had diabetes (Nominal)
 
 <h3> Medical (Current): </h3>
+
 * totChol: Total cholesterol level (Continuous)
 * sysBP: Systolic blood pressure (Continuous)
 * diaBP: Diastolic blood pressure (Continuous)
@@ -38,4 +42,5 @@ To predict coronary heart disease is considered one of the most difficult and co
 * glucose: Glucose Level (Continuous)
 
 <h3> Predict Variable (Desired Target): </h3>
+
 * 10-year risk of coronary heart disease CHD (Binary: “1”, means “Yes”, “0” means “No”)
