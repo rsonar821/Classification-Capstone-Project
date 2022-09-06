@@ -93,11 +93,6 @@ To overcome this problem an oversampling technique known as SMOTE was being used
 
 <h2 align="center"> Conclusion </h2>
 
-This leads us to the end of the project where all the requirements of the project
-were fulfilled such as data analysis, null value treatment, exploratory data analysis,
-modeling, hyperparameter tuning and feature importance.
-SMOTE Technique helped to balance the dataset to help the algorithms work better
-on the dataset.
-Hyperparameter Tuning helped a lot to take the model accuracy to the next level.
-The dataset was quite uniform and enough data was present for analysis purposes
-to make good predictions and to enhance the accuracy results.
+* Performed Hyperparameter Tuning using Randomized Search CV on Random Forest CLassifier.
+* The Random Forest Classifier gave the best predictions out of all the other algorithms.
+* The most important features for the model were found out to be 'age' and 'cigarettes per day'.
