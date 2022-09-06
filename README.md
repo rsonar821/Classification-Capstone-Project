@@ -12,6 +12,14 @@ To predict coronary heart disease is considered one of the most difficult and co
 
 ![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+<h2 align="center"> Problem Statement </h2>
+
+The dataset is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. The classification goal is to predict whether the patient has a 10-year risk of future coronary heart disease (CHD). The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes. Each attribute is a potential risk factor. There are both demographic, behavioral, and medical risk factors.
+
+The traditional risk factors for coronary heart disease are high LDL cholesterol, low HDL cholesterol, high blood pressure, family history, diabetes, smoking and being older than 45 for men.
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 <h2 align="center"> Features Used </h2>
 
 <h3> Demographic: </h3>
@@ -44,3 +52,52 @@ To predict coronary heart disease is considered one of the most difficult and co
 <h3> Predict Variable (Desired Target): </h3>
 
 * 10-year risk of coronary heart disease CHD (Binary: “1”, means “Yes”, “0” means “No”)
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center"> Data Preprocessing </h2>
+
+* The columns ‘cigsPerDay’, ‘education’, ‘BPMeds’, ‘totChol’, ‘BMI’, ‘heartRate’ and ‘glucose’ had missing (Nan) values but not much and were manageable.
+* Imputed the missing values with the median of the respective columns for all the variables except ‘cigsPerDay’.
+* The median of ‘cigsPerDay’ column was 0 but after checking the ‘is_smoking’ column found that the people has smoking habits, so imputed those Nan values with the mean of the column which was around 9.
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center"> Exploratory Data Analysis </h2>
+
+* High correlation found between systolic blood pressure and diastolic blood pressure and the relation is always collinear also according to the health science.
+* Cigarette consumption per day was seen decreasing with increasing age.
+* Increasing the cigarette consumption per day decreases the systolic blood pressure.
+* Even if a person does not have a smoking habit but is greater in age, he/she can develop a risk of Coronary Heart Disease, so age plays a vital role in deciding the risk factor.
+* Males smoke more as compared to females and thus are at a higher risk of Coronary Heart Disease.
+* Even a person who is not medicated towards Blood Pressure still can get risky towards Coronary Heart Disease if cigarettes consumption per day is high.
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center"> Handling Class Imbalance </h2>
+
+To overcome this problem an oversampling technique known as SMOTE was being used. SMOTE is an oversampling technique where the synthetic samples are generated for the minority class. This algorithm helps to overcome the overfitting problem posed by random oversampling. It focuses on the feature space to generate new instances with the help of interpolation between the positive instances that lie together.
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center"> Algorithms Used </h2>
+
+1. Logistic Regression: 0.75
+2. Decision Tree Classifier: 0.78
+3. Random Forest Classifier: 0.94
+4. Gradient Boosting Classifier: 0.89
+5. XGBoost Classifier: 0.88
+6. Support Vector Classifier: 0.81
+
+![------------------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 align="center"> Conclusion </h2>
+
+This leads us to the end of the project where all the requirements of the project
+were fulfilled such as data analysis, null value treatment, exploratory data analysis,
+modeling, hyperparameter tuning and feature importance.
+SMOTE Technique helped to balance the dataset to help the algorithms work better
+on the dataset.
+Hyperparameter Tuning helped a lot to take the model accuracy to the next level.
+The dataset was quite uniform and enough data was present for analysis purposes
+to make good predictions and to enhance the accuracy results.
